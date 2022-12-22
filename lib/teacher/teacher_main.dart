@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var container;
     if (currentPage == DrawerSections.dashboard) {
-      container = Home();
+      // container = Home();
     }
     //else if (currentPage == DrawerSections.contacts) {
     //   container = ContactsPage();

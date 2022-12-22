@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/student/student_dashboard.dart';
 import 'package:flutter_application_1/student/student_feed.dart';
+import 'package:flutter_application_1/student/student_popup.dart';
 
 class Nav extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _NavState extends State<Nav> {
   List<Widget> _widgetOptions = <Widget>[
     Dashboard(),
     Feed(),
-    Text('Profile Screen'),
+    PopUp(),
   ];
 
   void _onItemTap(int index) {
