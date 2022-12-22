@@ -51,7 +51,15 @@ dev_dependencies:
   google_fonts: ^2.1.0
   hexcolor: ^2.0.4
   font_awesome_flutter: ^9.1.0
-  otp_text_field: ^1.1.1
+  dropdown_search: ^0.4.8
+  date_time_picker: ^1.1.0
+  fzregex: ^1.0.3
+  firebase_core:
+  flutter_svg:
+  flare_flutter: ^2.0.6
+  randomizer: ^0.0.2
+  flrx_validator: ^0.4.0+2
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

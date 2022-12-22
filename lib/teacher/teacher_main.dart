@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_drawer_example/privacy_policy.dart';
 // import 'package:flutter_drawer_example/send_feedback.dart';
-// import 'package:flutter_drawer_example/settings.dart';
+import 'package:flutter_application_1/student/student_settings.dart';
 import 'package:flutter_application_1/student/student_home.dart';
 // import 'contacts.dart';
-import 'student_home.dart';
-import 'student_feedback.dart';
+import 'teacher_dashboard.dart';
 // import 'events.dart';
-import 'student_leave_apply.dart';
 import 'drawer_header.dart';
 // import 'notes.dart';
 // import 'notifications.dart';
@@ -34,22 +32,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var container;
     if (currentPage == DrawerSections.dashboard) {
-      container = Nav();
-    } else if (currentPage == DrawerSections.contacts) {
-      container = LeaveApply();
-    } else if (currentPage == DrawerSections.events) {
-      // container = FeedBack();
-    } else if (currentPage == DrawerSections.notes) {
-      // container = NotesPage();
-    } else if (currentPage == DrawerSections.settings) {
-      // container = SettingsPage();
-    } else if (currentPage == DrawerSections.notifications) {
-      // container = NotificationsPage();
-    } else if (currentPage == DrawerSections.privacy_policy) {
-      // container = PrivacyPolicyPage();
-    } else if (currentPage == DrawerSections.send_feedback) {
-      container = FeedBack();
+      container = Home();
     }
+    //else if (currentPage == DrawerSections.contacts) {
+    //   container = ContactsPage();
+    // } else if (currentPage == DrawerSections.events) {
+    //   container = EventsPage();
+    // } else if (currentPage == DrawerSections.notes) {
+    //   container = NotesPage();
+    // } else if (currentPage == DrawerSections.settings) {
+    //   container = SettingsPage();
+    // } else if (currentPage == DrawerSections.notifications) {
+    //   container = NotificationsPage();
+    // } else if (currentPage == DrawerSections.privacy_policy) {
+    //   container = PrivacyPolicyPage();
+    // } else if (currentPage == DrawerSections.send_feedback) {
+    //   container = SendFeedbackPage();
+    // }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -88,7 +87,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           menuItem(1, "Dashboard", Icons.dashboard_outlined,
               currentPage == DrawerSections.dashboard ? true : false),
-          menuItem(2, "Leave Apply", Icons.people_alt_outlined,
+          menuItem(2, "Settings", Icons.people_alt_outlined,
               currentPage == DrawerSections.contacts ? true : false),
           menuItem(3, "Events", Icons.event,
               currentPage == DrawerSections.events ? true : false),
