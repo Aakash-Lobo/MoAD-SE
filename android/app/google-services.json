@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "46799448407",
+    "project_id": "cms-xaviers",
+    "storage_bucket": "cms-xaviers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46799448407:android:bc898ae5cf09f8f8a9b612",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46799448407-ft7g4epe8t1437o0vb80rn093s50h4dr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0Aa1GUKgsfUCmdB5lTiluYMCUpDTn_2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46799448407-ft7g4epe8t1437o0vb80rn093s50h4dr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/signup_screen.dart';
 import 'package:flutter_application_1/student/student_main.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
