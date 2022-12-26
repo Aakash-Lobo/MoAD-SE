@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/student/student_attendanc_manager.dart';
 import 'package:flutter_application_1/student/student_main_exam.dart';
 import 'package:flutter_application_1/student/student_practice_exam.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -138,6 +139,116 @@ class _PopUpState extends State<PopUp> {
                       ),
                       Text(
                         "Main Exam",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        "March, Wednesday",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Colors.white38,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "3 Events",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xff453658),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      GestureDetector(
+                        child: Image.asset(
+                          "assets/calendar.png",
+                          width: 42,
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AttendanceManager()));
+                        },
+                      ),
+                      SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Attendance Manager",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        "March, Wednesday",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Colors.white38,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "3 Events",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xff453658),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      GestureDetector(
+                        child: Image.asset(
+                          "assets/calendar.png",
+                          width: 42,
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AttendanceManager()));
+                        },
+                      ),
+                      SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Fee",
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Colors.white,
