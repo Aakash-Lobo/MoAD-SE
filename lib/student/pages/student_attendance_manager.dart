@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/student/attendance/pages/home_page.dart';
+import 'package:flutter_application_1/student/pages/attendance/pages/home_page.dart';
 
 class AttendanceManager extends StatelessWidget {
   const AttendanceManager({super.key});

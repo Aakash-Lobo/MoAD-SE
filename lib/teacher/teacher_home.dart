@@ -1,8 +1,8 @@
-import 'package:flutter_application_1/student/student_profile.dart';
-import 'package:flutter_application_1/student/student_settings.dart';
+import 'package:flutter_application_1/student/pages/student_profile.dart';
+import 'package:flutter_application_1/student/pages/student_settings.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_1/student/student_chat.dart';
+import 'package:flutter_application_1/student/pages/student_chat.dart';
 import 'package:flutter_application_1/student/student_dashboard.dart';
 
 class Home extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_drawer_example/privacy_policy.dart';
 // import 'package:flutter_drawer_example/send_feedback.dart';
-import 'package:flutter_application_1/student/student_settings.dart';
+import 'package:flutter_application_1/student/pages/student_settings.dart';
 import 'package:flutter_application_1/student/student_home.dart';
 // import 'contacts.dart';
 import 'teacher_dashboard.dart';
