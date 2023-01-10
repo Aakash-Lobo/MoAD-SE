@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/logout.dart';
+import 'package:flutter_application_1/student/pages/student_about_dev.dart';
+import 'package:flutter_application_1/student/pages/student_faq.dart';
+import 'package:flutter_application_1/student/pages/student_t&c.dart';
+import 'package:flutter_application_1/student/pages/student_train_concession.dart';
 // import 'package:flutter_drawer_example/privacy_policy.dart';
 // import 'package:flutter_drawer_example/send_feedback.dart';
 // import 'package:flutter_drawer_example/settings.dart';
 import 'package:flutter_application_1/student/student_home.dart';
+
+import 'package:flutter_application_1/student/pages/student_settings.dart';
+import 'package:flutter_application_1/student/pages/student_notification.dart';
 // import 'contacts.dart';
 import 'student_home.dart';
 import 'pages/student_feedback.dart';
@@ -35,20 +43,24 @@ class _HomePageState extends State<HomePage> {
     var container;
     if (currentPage == DrawerSections.dashboard) {
       container = Nav();
-    } else if (currentPage == DrawerSections.contacts) {
+    } else if (currentPage == DrawerSections.leave) {
       container = LeaveApply();
-    } else if (currentPage == DrawerSections.events) {
-      // container = FeedBack();
-    } else if (currentPage == DrawerSections.notes) {
-      // container = NotesPage();
+    } else if (currentPage == DrawerSections.train) {
+      container = TrainConcession();
+    } else if (currentPage == DrawerSections.term) {
+      container = TandC();
     } else if (currentPage == DrawerSections.settings) {
-      // container = SettingsPage();
-    } else if (currentPage == DrawerSections.notifications) {
-      // container = NotificationsPage();
-    } else if (currentPage == DrawerSections.privacy_policy) {
-      // container = PrivacyPolicyPage();
+      container = FaQ();
+    } else if (currentPage == DrawerSections.about) {
+      container = AboutDev();
+    } else if (currentPage == DrawerSections.settings) {
+      container = Settings();
+    } else if (currentPage == DrawerSections.notification) {
+      container = Notificatio();
     } else if (currentPage == DrawerSections.send_feedback) {
       container = FeedBack();
+    } else if (currentPage == DrawerSections.logout) {
+      container = logout();
     }
     return Scaffold(
       appBar: AppBar(
@@ -88,22 +100,27 @@ class _HomePageState extends State<HomePage> {
         children: [
           menuItem(1, "Dashboard", Icons.dashboard_outlined,
               currentPage == DrawerSections.dashboard ? true : false),
-          menuItem(2, "Leave Apply", Icons.people_alt_outlined,
-              currentPage == DrawerSections.contacts ? true : false),
-          menuItem(3, "Events", Icons.event,
-              currentPage == DrawerSections.events ? true : false),
-          menuItem(4, "Notes", Icons.notes,
-              currentPage == DrawerSections.notes ? true : false),
+          menuItem(2, "Leave Application", Icons.people_alt_outlined,
+              currentPage == DrawerSections.leave ? true : false),
+          menuItem(3, "Train Concession", Icons.event,
+              currentPage == DrawerSections.train ? true : false),
           Divider(),
-          menuItem(5, "Settings", Icons.settings_outlined,
+          menuItem(4, "Terms & Condition", Icons.notes,
+              currentPage == DrawerSections.term ? true : false),
+          menuItem(5, "FAQs", Icons.settings_outlined,
+              currentPage == DrawerSections.faq ? true : false),
+          menuItem(6, "About the Devs", Icons.notifications_outlined,
+              currentPage == DrawerSections.about ? true : false),
+          Divider(),
+          menuItem(7, "Settings", Icons.privacy_tip_outlined,
               currentPage == DrawerSections.settings ? true : false),
-          menuItem(6, "Notifications", Icons.notifications_outlined,
-              currentPage == DrawerSections.notifications ? true : false),
-          Divider(),
-          menuItem(7, "Privacy policy", Icons.privacy_tip_outlined,
-              currentPage == DrawerSections.privacy_policy ? true : false),
-          menuItem(8, "Send feedback", Icons.feedback_outlined,
+          menuItem(8, "Notification", Icons.feedback_outlined,
+              currentPage == DrawerSections.notification ? true : false),
+          menuItem(9, "Send feedback", Icons.feedback_outlined,
               currentPage == DrawerSections.send_feedback ? true : false),
+          Divider(),
+          menuItem(10, "Logout", Icons.feedback_outlined,
+              currentPage == DrawerSections.logout ? true : false),
         ],
       ),
     );
@@ -119,19 +136,23 @@ class _HomePageState extends State<HomePage> {
             if (id == 1) {
               currentPage = DrawerSections.dashboard;
             } else if (id == 2) {
-              currentPage = DrawerSections.contacts;
+              currentPage = DrawerSections.leave;
             } else if (id == 3) {
-              currentPage = DrawerSections.events;
+              currentPage = DrawerSections.train;
             } else if (id == 4) {
-              currentPage = DrawerSections.notes;
+              currentPage = DrawerSections.term;
             } else if (id == 5) {
-              currentPage = DrawerSections.settings;
+              currentPage = DrawerSections.faq;
             } else if (id == 6) {
-              currentPage = DrawerSections.notifications;
+              currentPage = DrawerSections.about;
             } else if (id == 7) {
-              currentPage = DrawerSections.privacy_policy;
+              currentPage = DrawerSections.settings;
             } else if (id == 8) {
+              currentPage = DrawerSections.notification;
+            } else if (id == 9) {
               currentPage = DrawerSections.send_feedback;
+            } else if (id == 10) {
+              currentPage = DrawerSections.logout;
             }
           });
         },
@@ -166,11 +187,13 @@ class _HomePageState extends State<HomePage> {
 
 enum DrawerSections {
   dashboard,
-  contacts,
-  events,
-  notes,
+  leave,
+  train,
+  term,
+  faq,
+  about,
   settings,
-  notifications,
-  privacy_policy,
+  notification,
   send_feedback,
+  logout,
 }
